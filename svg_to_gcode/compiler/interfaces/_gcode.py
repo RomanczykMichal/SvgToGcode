@@ -23,7 +23,7 @@ class Gcode(Interface):
         self._next_speed = speed
         return ''
 
-    def linear_move(self, x=None, y=None, z=None):
+    def linear_move(self, x=None, y=None, z=None, is_start=False):
 
         if self._next_speed is None:
             raise ValueError("Undefined movement speed. Call set_movement_speed before executing movement commands.")

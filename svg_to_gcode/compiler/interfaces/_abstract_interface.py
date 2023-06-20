@@ -20,7 +20,7 @@ class Interface:
         """
         raise NotImplementedError("Interface class must implement the set_speed command")
 
-    def linear_move(self, x=None, y=None, z=None) -> str:
+    def linear_move(self, x=None, y=None, z=None, is_start=False) -> str:
         """
         Moves the tool in a straight line.
 
