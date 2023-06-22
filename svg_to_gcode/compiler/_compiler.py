@@ -121,6 +121,8 @@ class Compiler:
 
         for line in line_chain:
             code.append(self.interface.linear_move(line.end.x, line.end.y))
+            
+        code.append(self.interface.home_axes())
 
         self.body.extend(code)
 
